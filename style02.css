@@ -1,0 +1,241 @@
+
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SunBatang-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    margin: 0; padding: 0;  /* body 태그의 CSS 기본값 수정 */
+    font-family: 'SunBatang-Light';
+    animation-name: test-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+#BGimg {
+    position: fixed;
+    z-index: -30;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    }
+#BGimg > img {
+    width: 100%;
+}
+
+
+/* -----------------------------------------------------------------------
+header 영역 - 로고, 메인메뉴
+----------------------------------------------------------------------- */
+
+header {
+    position: fixed;
+    width: 100%;
+    /*background-color: rgba(74, 189, 114, 0.762);*/
+    z-index: 10000;
+    }
+#logo {
+    position: absolute;
+    top: 15px;
+    left: 80px;
+    font-family: '국립박물관문화재단클래식B';
+    font-size: 40px;
+    width: 50%;
+    /*background-color: rgba(142, 47, 220, 0.762);*/
+    z-index: 10000;
+    color: #ffffff;
+    text-shadow: 3px 3px 15px #0000008f
+}
+#mainmenu {
+    font-family: 'SUITE-Regular';
+    position: relative;
+    width: 39%;
+    height: 80px;
+    font-size: 17pt;
+    left: 55%;
+    text-shadow: 3px 3px 25px #0000008f
+   
+}
+#mainmenu > ul {
+    display: inline-block;
+
+    list-style-type: none;
+}
+#mainmenu > ul a:link,
+#mainmenu > ul a:visited
+{    text-decoration: none;
+    color: #ffffff;
+}
+#mainmenu > ul a:hover
+{    
+    color: #ff00008f;
+}
+#mainmenu > ul li {
+    float: left;
+    padding: 0 24px;
+    /* background-color: #fff;
+    border: solid 1px #000; */
+}
+#mainmenu > ul li:hover {
+    /* background-color: #ffffff; */
+}
+/* -----------------------------------------------------------------------
+본문 영역
+----------------------------------------------------------------------- */
+.aaa{
+    padding: 2%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2em;
+    }
+    .aaa02{
+        padding: 3%;
+        background-color: rgb(255, 255, 255);
+        border-radius: 2em;
+        }
+
+    .aaa03{
+        padding: 3%;
+        /*background-color: rgb(255, 255, 255);*/
+         }
+    
+main {
+        position: relative;
+        width: 50%;
+        z-index: 10;
+        margin: 0 auto; /* 박스(#main-container)를 뷰포트의 가로 방향 가운데로 정렬 */
+        padding: 6%;
+        /*background-color: rgb(175, 54, 54);*/
+    }
+footer {
+        position: relative;
+        width: 50%;
+        z-index: 10;
+        margin: 0 auto; /* 박스(#main-container)를 뷰포트의 가로 방향 가운데로 정렬 */
+        padding: 18%;
+        /*background-color: rgb(175, 54, 54);*/
+    }
+#title {
+    font-family: 'SunBatang-Light';
+    text-align: center;
+     font-size: 15px;
+    margin-top: 0;
+    margin-bottom: 0;    
+    /*background-color: aquamarine;*/
+}
+#title01 {
+    font-family: 'SunBatang-Light';
+    text-align: center;
+    font-size: 20px;
+    margin: 0;
+    height: 60px;    
+   /* background-color: aquamarine;*/
+}
+#title02 {
+    font-family: 'SunBatang-Light';
+    text-align: center;
+    font-size: 30px;
+    margin: 0;
+    height: 60px; 
+    color: #ffffff;
+    text-shadow: 3px 3px 15px #0000008f   
+   /* background-color: aquamarine;*/
+}
+.description {
+    font-family: 'SUITE-Regular';
+    font-size: 15px;
+    line-height: 100%;
+    text-align: center;
+    padding-top: 0;
+    line-height: 5px;
+    color: rgb(0, 0, 0);
+   /* background-color: rgb(255, 60, 60);*/
+}
+.description01 {
+    font-family: 'SUITE-Regular';
+    font-size: 30px;
+    line-height: 100%;
+    text-align: center;
+    padding-top: 0;
+    line-height: 5px;
+    color: rgb(0, 0, 0);
+   /* background-color: rgb(255, 60, 60);*/
+}
+.description02 {
+    font-family: 'SUITE-Regular';
+    font-size: 20px;
+    line-height: 100%;
+    text-align: center;
+    padding-top: 0;
+    line-height: 20px;
+    color: rgb(0, 0, 0);
+   /* background-color: rgb(255, 60, 60);*/
+}
+.description03 {
+    font-family: 'SUITE-Regular';
+    font-size: 17px;
+    line-height: 100%;
+    text-align: center;
+    padding-top: 0;
+    line-height: 10px;
+    color: rgb(0, 0, 0);
+   /* background-color: rgb(255, 60, 60);*/
+}
+.description04 {
+    font-family: 'SUITE-Regular';
+    font-size: 15px;
+    line-height: 100%;
+    text-align: justify;
+    padding-top: 0;
+    line-height: 20px;
+    color: rgb(0, 0, 0);
+   /* background-color: rgb(255, 60, 60);*/
+}
+#picture {
+    display: flex;
+    justify-content: center; /* flex 아이템을 메인축(가로) 방향으로 가운데 정렬 */
+    flex-wrap: wrap;
+    margin: 0;
+    top: 100px;
+    text-align: center; /* 박스 안의 텍스트 가로 정렬. 이미지에도 적용됨 */
+    /*background-color: rgb(10, 72, 43);*/
+}
+.picture-item {
+        flex-basis: 300px; /* flex-basis는 메인축 방향의 기준 크기 */
+    flex-grow: 0;
+    flex-shrink: 0;
+    width: 100%;
+
+    /* .picture-item 클래스 요소도 flex 컨테이너로 설정 */
+    display: flex;
+    flex-direction: column; /* flex 메인축을 세로(column) 방향으로 설정 */
+    justify-content: end;
+    padding-top: 13px;
+    }
+
+    /* footer 영역 스타일 */
+#copyright {
+    font-family: 'SUITE-Regular';
+    position: relative;
+    width: 100%;
+    left: 50%; transform: translateX(-50%);
+    font-size: 1.0em;
+    text-align: center;
+    bottom: 16px;
+    /*background-color: aqua;*/
+}

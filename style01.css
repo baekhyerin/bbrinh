@@ -1,0 +1,302 @@
+
+@font-face {
+    font-family: '국립박물관문화재단클래식B';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/국립박물관문화재단클래식B.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SunBatang-Light';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/SunBatang-Light.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'SUITE-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2304-2@1.0/SUITE-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+/* 기본 태그 스타일 */
+
+h1 {
+    margin: 0; padding: 0;
+}
+a, a:link, a:hover, a:visited
+{
+    color: #000000;
+    text-decoration: none;
+}
+
+header {
+    position: fixed;
+    width: 30%;
+    height: 300px;    
+    color: #ffffff;
+    left: 0;
+}
+
+main {
+    position: relative;
+    left: 50%;
+    width: 100%;
+    margin: 0 ;
+    padding: 0;
+}
+
+footer {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    height: 48px;
+    color: #000000;
+}
+#BGimg {
+    position: fixed;
+    z-index: 0;
+    margin: 0;
+    padding: 0;
+    top: 0;
+    left: 0;
+    }
+#BGimg > img {
+    width: 100%;
+}
+
+
+#moving-object {
+    z-index: 20000;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 50px;
+    left: 50px;
+    background-color: rgb(180, 255, 255);
+
+    /*
+    animation-name: rect-animation;
+    animation-duration: 4s;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    */
+
+    animation: obj-path 4s 1s infinite linear alternate,
+            obj-rotate 2s 1s infinite linear;
+}
+@keyframes obj-path {
+    0% {
+        top: 50px;
+        left: 50px;
+    }
+    25% {
+        top: 30vh;
+        left: 90vw;
+    }
+    50% {
+        top: 80vh;
+        left: 70vw;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+    }
+    75% {
+        top: 50vh;
+        left: 80vw;
+    }
+    100% {
+        top: 70vh;
+        left: 50px;
+    }
+}
+@keyframes obj-rotate {
+    to {
+      transform: rotate(360deg);
+    }
+}
+
+
+body {
+    margin: 0; padding: 0;  /* body 태그의 CSS 기본값 수정 */
+    font-family: 'SunBatang-Light';
+    animation-name: test-animation;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+/*
+@keyframes test-animation {
+    0% {background-colo: #ffffff; }
+    33% { background-color: red; }
+    66% { background-color: blue; }
+    100% { background-color: yellow; }
+}
+*/
+
+
+
+/* header 영역 스타일 */
+#logo {
+    position: relative;
+    width: 360px;
+    padding: 32px;
+    text-align: left;
+    font-family: '국립박물관문화재단클래식B';
+    font-size: 4.6em;
+    font-weight: 700;
+    text-shadow: 3px 3px 15px #0000008f
+    /*background-color: #f9ff3c; */
+}
+#mainmenu {
+    font-family: 'SUITE-Regular';
+    position: relative;
+    font-size: 30pt;
+    left: 18px;
+    text-shadow: 3px 3px 30px #0000008f
+   /*background-color: #64fff2;*/
+}
+#mainmenu > ul {
+    display: inline-block;
+    margin: 0; padding: 0;
+    list-style-type: none;
+    line-height: 20px;
+}
+#mainmenu > ul a:link,
+#mainmenu > ul a:visited
+{
+    text-decoration: none;
+    color: #ffffff;
+}
+#mainmenu > ul a:hover
+{
+    color: #ff00008f;
+}
+#mainmenu > ul li {
+
+    padding: 0 24px;
+    /* background-color: #fff;
+    border: solid 1px #000; */
+}
+#mainmenu > ul li:hover {
+    /* background-color: #ffffff; */
+}
+
+
+
+/* main 영역 스타일 */
+#projects01 {
+    position: absolute;
+    width: 20%;
+    padding-top: 10px;
+    left: -18%;
+    margin-right: 0;
+    /*background-color: #676fff;*/
+}
+#projects02 {
+    position: absolute;
+    width: 20%;
+    padding-top: 10px;
+    left: 4.5%;
+    margin-right: 0;
+    /*background-color: #20ff6e;*/
+}
+#projects03 {
+    position: absolute;
+    width: 20%;
+    padding-top: 10px;
+    left: 27%;
+    margin-right: 0;
+    /*background-color: #ff76c8;*/
+}
+.project-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 25px;
+    padding:0;
+    /*background-color: #ee2f52;*/
+   } 
+
+.project-container > img {
+    width: 100%;
+}
+.project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    opacity: 0.0;
+    display: flex;
+    flex-direction: column; /* 아이템이 세로 방향으로 쌓이는 flexbox */
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s; /* css 속성값이 변하는 경우 애니메이션 처리 */     
+}
+.project-container:hover .project-overlay {
+    opacity: 0.85;
+} 
+.text {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 16px;
+    color: rgb(0, 89, 30);
+    font-size: 18px;
+}
+.stext {
+    margin: 0;
+    padding: 0;
+    color: rgb(0, 89, 30);
+    font-size: 13px;
+}
+
+
+#main-contaner {
+    width: 100%;
+    z-index: 1;
+    
+}
+
+
+
+/* footer 영역 스타일 */
+#copyright {
+    font-family: 'SUITE-Regular';
+    position: fixed;
+    left: 10%; transform: translateX(-50%);
+    font-size: 1.0em;
+    bottom: 16px;
+}
+
+/* 모바일(스마트폰, 태블릿) 대상 CSS 스타일 */
+#m-alert {
+    text-align: center;
+    font-family: "Pretendard-Regular";
+    font-size: 24px;
+}
+
+/*메뉴 영역*/
+
+
+/*@media screen and (max-width: 960px) {
+    .img-container {
+        width: 50%;
+        padding-top: 50%;
+    } 
+    #social {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 520px) {
+    .img-container {
+        width: 100%;
+        padding-top: 100%;
+    } 
+}*/
+
